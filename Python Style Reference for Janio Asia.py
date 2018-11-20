@@ -12,38 +12,50 @@ Code Lay-out
 -Indentation 
 Indentation is 2 spaces
 Indentation style for multiple parameters in one function just according to the example. The multiple parameters generally means the number of parameters is greater than or equal to 3:  
-for example
+''' python
+def short_function_name(var_one, var_two, var_three):
+	pass
 def long_function_name(
 	    var_one,var_two,var_three,
 	    var_four):
 	pass 
-
+'''
 Indentation style for long ‘if’ statement just according to the example:
-for example
+
+''' python
+short one:
+if (cond_one and cond_two and cond_three):
+	do_something
+long one:
 if (this_is_one_thing and 
-	that_is_another_thing):
+	that_is_another_thing and 
+	that_is_another_another_thing):
 	do_something
 
+'''
 Indentation style for long lines in list/set/tuple(the long lines here means the multidimensional data):
-for example
-my_list = [1,2,3,
-           4,5,6]
-
-         
+'''python
+single_list = [1,]
+short_list = [1,2,3,4,5,6]
+medium_list = [var_one, var_two, var_three]
+long_list = [1,2,3,
+             4,5,6]
+'''        
 -Maximum Line Length
 Maximum line length is 120 characters 
 
 -A Line Break Before or After a Binary Operator 
-for example
-income = (gross_wages
+'''python
+short_income = gross_wages + taxable_interest + dividends 
+long_income = (gross_wages
 	    + taxable_interest
 	    + (dividends - qualified_dividends)
 	    - iro_deduction
 	    - student_loan_interest)
-           
+ '''          
 -Blank Lines
 Blank line for surround top-level function and class definitions is Two Lines
-for example
+'''python
 class Student(object):
 	pass
 
@@ -57,10 +69,10 @@ def function_name(parameters):
 
 def function_name_2(parameters):
 	pass
-
+'''
 
 Blank line for method definitions inside a class are surrounded is One Line 
-for example
+'''python
 class Student(object):
 
 	def __init__(self,name,score):
@@ -73,23 +85,33 @@ class Student(object):
 
 class Teacher(object):
 	pass
+'''
+No blank lines after function definition
+'''python
+def hello_function_one():
+    """Return 'hello' string."""
+    return 'hello'
+
+def hello_function_two():
+    return 'hello'
+'''
 -Imports 
 Import as two separate lines 
-for example
+'''python
 import os
 import sys
-
+'''
 The import order should be as:
 Standard library imports, related third party imports, local apps/librarys 
 
 Import multiple class from single lib:
-for example
+'''python
 from django.db.models import Model, Q, F
-
+'''
 Use relative import if same package 
-for example
+'''python
 from .models import Something         
-
+'''
 
 -String Quotes 
 The string quotes should be single quote
@@ -97,35 +119,36 @@ The string quotes should be single quote
 
 -Whitespace in Expressions and Statements 
 Assignment value 
-for example
+'''python
 x = 1
 y = 2
 long_variable = 3  
-
+'''
 Index and slice 
-for example
+'''python
 dct['key'] = lst[index] 
-
+'''
 Invoke function with parameters 
-for example
+'''python
 spam(1)          
-
+'''
 Comma in slice 
-for example
+'''python
 ham[1:9], ham[1:9:3], ham[1::3], ham[1:9:]
 ham[lower:upper], ham[lower:upper:], ham[lower::step]
 ham[lower+offset : upper+offset]
 ham[: upper_fin(x) : step_fn(x)], ham[:: step_fn(x)]
 ham[lower + offset : upper + offset]
+'''
            
 Before comma,semicolon or colon 
-for example
+'''python
 if x == 4: print x, y; x, y = y,x 
-           
+'''           
 After square brackets,parathess 
-for example
+'''python
 spam(ham[1], {eggs: 2})
- 
+ '''
 
 -Naming Conventions 
 Class name conventions：CapitalizedWords 
@@ -145,9 +168,9 @@ Constants name conventions: UPPER_CASE_WITH_UNDERSCORES
 
 -Comments 
 Inline comment: 2 spaces after statement, and start with ‘#’ and a single space 
-
-For example: x = 10  # comment
-
+'''python
+x = 10  # comment
+'''
 
 Other Rules 
 =============
