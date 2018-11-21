@@ -175,3 +175,6 @@ x = 10  # comment
 Other Rules 
 =============
 Queryset and objects should end with _queryset and _obj respectively. Such as order_queryset and order_obj. list and set should be order_list, and order_set.
+
+
+
